@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>PodPlayer · Prototyp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="workspace">
+    <section class="introduction">
+      <span class="eyebrow">PODPLAYER / DESIGNSTUDIE 01</span>
+      <h1>En stund.<br>Bara lyssna.</h1>
+      <p>En liten poddspelare med plats för det viktigaste. Prova gränssnittet innan hårdvaran kommer.</p>
+      <div class="resolution"><span></span> 240 × 320 · Pekskärm · Stående</div>
+      <div class="preview-size" role="group" aria-label="Förhandsvisningens storlek">
+        <button data-scale="1" aria-pressed="false">Verklig storlek</button>
+        <button data-scale="1.5" aria-pressed="true">Förstorad · 150 %</button>
+      </div>
+      <p class="note">Fiktiva poddar. Uppspelningen simuleras och använder varken ljud eller nätverk.</p>
+    </section>
+    <section class="device-area" aria-label="Interaktiv prototyp">
+      <div class="device-sizer"><div class="device"><div class="device-label">PODPLAYER <span>●</span></div><div id="screen" class="screen" aria-label="Spelarens pekskärm"></div><div class="device-bottom"></div></div></div>
+      <span class="device-caption">WAVESHARE ESP32-S3 · 2,8 TUM</span>
+    </section>
+    <aside class="dev-panel">
+      <span class="eyebrow">PROVA ETT SCENARIO</span>
+      <h2>Så känns det.</h2>
+      <p>Välj ett läge och tryck direkt på skärmen.</p>
+      <label for="scenario">Spelarens tillstånd</label>
+      <select id="scenario">
+        <option value="normal">Normal användning</option>
+        <option value="loading">Hämtar avsnitt</option>
+        <option value="empty">Inga avsnitt</option>
+        <option value="offline">Ingen nätanslutning</option>
+        <option value="error">Uppspelningsfel</option>
+        <option value="format">Ljudformat stöds inte</option>
+      </select>
+      <button id="reset" class="reset">Återställ demonstrationen</button>
+      <div class="dev-info"><span>01 — Mina poddar</span><span>02 — Avsnitt</span><span>03 — Spelare</span><span>04 — Inställningar</span></div>
+      <p id="storage-note" class="note">Dina val sparas i den här webbläsaren.</p>
+    </aside>
+  </main>
+  <script src="data.js"></script>
+  <script src="core.js"></script>
+  <script src="vendor/lucide/icons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

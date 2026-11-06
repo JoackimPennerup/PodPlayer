@@ -1,0 +1,5 @@
+build/
+.pio/
+firmware/secrets.h
+test-results/
+__pycache__/

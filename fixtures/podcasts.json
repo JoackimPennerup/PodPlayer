@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mellan-raderna",
+    "title": "Mellan raderna",
+    "subtitle": "Berättelser som stannar kvar",
+    "feedUrl": "https://example.invalid/mellan-raderna.xml",
+    "artworkUrl": "",
+    "color": "#914b39",
+    "initials": "Mellan\nraderna",
+    "newCount": 2
+  },
+  {
+    "id": "nyfiken",
+    "title": "Nyfiken på världen",
+    "subtitle": "Små frågor. Stora upptäckter.",
+    "feedUrl": "https://example.invalid/nyfiken.xml",
+    "artworkUrl": "",
+    "color": "#355e72",
+    "initials": "Nyfiken på\nvärlden",
+    "newCount": 1
+  },
+  {
+    "id": "sondag",
+    "title": "Söndag i köket",
+    "subtitle": "Mat, människor och minnen",
+    "feedUrl": "https://example.invalid/sondag.xml",
+    "artworkUrl": "",
+    "color": "#667344",
+    "initials": "Söndag\ni köket",
+    "newCount": 0
+  }
+]

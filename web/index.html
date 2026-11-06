@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:,">
+  <title>PodPlayer · LVGL i webbläsaren</title>
+  <link rel="stylesheet" href="../mock/styles.css">
+  <style>
+    canvas.screen{display:block;touch-action:none;cursor:pointer}
+    #boot-status{position:fixed;bottom:12px;left:12px;font:12px system-ui;padding:8px 12px;background:#213c36;color:white;border-radius:8px;max-width:90vw}
+    #boot-status[hidden]{display:none}
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section class="introduction">
+      <span class="eyebrow">PODPLAYER / LVGL · WEBASSEMBLY</span>
+      <h1>En stund.<br>Bara lyssna.</h1>
+      <p>En liten poddspelare med plats för det viktigaste. Prova gränssnittet innan hårdvaran kommer. Skärmen ritas av riktig LVGL 8.3.10.</p>
+      <div class="resolution"><span></span> 240 × 320 · Pekskärm · Stående</div>
+      <div class="preview-size" role="group" aria-label="Förhandsvisningens storlek">
+        <button data-scale="1" aria-pressed="false">Verklig storlek</button>
+        <button data-scale="1.5" aria-pressed="true">Förstorad · 150 %</button>
+      </div>
+      <p class="note">Fiktiva poddar. Uppspelningen simuleras och använder varken ljud eller nätverk.</p>
+    </section>
+    <section class="device-area" aria-label="Interaktiv prototyp">
+      <div class="device-sizer"><div class="device"><div class="device-label">PODPLAYER <span>●</span></div><canvas id="screen" class="screen" width="240" height="320" tabindex="0" aria-label="PodPlayer pekskärm. Använd mus eller touch för att navigera."></canvas><div class="device-bottom"></div></div></div>
+      <span class="device-caption">WAVESHARE ESP32-S3 · 2,8 TUM</span>
+    </section>
+    <aside class="dev-panel">
+      <span class="eyebrow">PROVA ETT SCENARIO</span>
+      <h2>Så känns det.</h2>
+      <p>Välj ett läge och tryck direkt på skärmen.</p>
+      <label for="scenario">Spelarens tillstånd</label>
+      <select id="scenario">
+        <option value="normal">Normal användning</option>
+        <option value="loading">Hämtar avsnitt</option>
+        <option value="empty">Inga avsnitt</option>
+        <option value="offline">Ingen nätanslutning</option>
+        <option value="error">Uppspelningsfel</option>
+        <option value="format">Ljudformat stöds inte</option>
+      </select>
+      <button id="reset" class="reset">Återställ demonstrationen</button>
+      <div class="dev-info"><span>01 — Mina poddar</span><span>02 — Avsnitt</span><span>03 — Spelare</span><span>04 — Inställningar</span></div>
+      <p id="storage-note" class="note">Startar LVGL…</p>
+    </aside>
+  </main>
+  <div id="boot-status" role="status">Startar WebAssembly…</div>
+  <script src="dist/podplayer.js"></script>
+  <script src="host.js"></script>
+</body>
+</html>

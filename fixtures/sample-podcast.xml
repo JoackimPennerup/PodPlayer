@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+ <channel>
+  <title>Mellan raderna &amp; andra berättelser</title>
+  <image><url>https://example.invalid/art.jpg</url></image>
+  <item>
+   <title><![CDATA[När staden somnar]]></title>
+   <guid isPermaLink="false">urn:demo:episode:001</guid>
+   <pubDate>Thu, 05 Nov 2026 08:00:00 +0100</pubDate>
+   <enclosure url="https://example.invalid/episode.mp3?a=1&amp;b=2" type="audio/mpeg" length="12345678"/>
+   <itunes:duration>00:39:42</itunes:duration>
+   <itunes:image href="https://example.invalid/episode.jpg"/>
+  </item>
+  <item>
+   <title>Ett brev fr&#229;n f&#xF6;rr</title>
+   <guid>urn:demo:episode:002</guid>
+   <enclosure type='audio/mp4' length='98765' url='https://example.invalid/episode.m4a'/>
+   <itunes:duration>1940</itunes:duration>
+  </item>
+  <item>
+   <title>Utan ljudfil</title>
+   <guid>unplayable</guid>
+  </item>
+ </channel>
+</rss>
